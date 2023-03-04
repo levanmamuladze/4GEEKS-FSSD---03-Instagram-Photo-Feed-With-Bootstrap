@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Instagram Photo Feed with Bootstrap</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Content here -->
+        <header class="d-flex flex-wrap justify-content-center p-3 mb-3 bg-secondary-subtle">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <i class="bi bi-instagram me-2 fs-4"></i>
+                <span class="fs-4 fw-bold">Instagram</span>
+            </a>
+      
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create a new post
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Caption:</h6>
+                        <textarea class="form-control" aria-label="With textarea" placeholder="Add the caption of your post here"></textarea>
+                        <div class="my-3">
+                            <button type="button" class="btn btn-light border"><i class="bi bi-camera-fill"></i></button>
+                            <button type="button" class="btn btn-light border"><i class="bi bi-geo-alt-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="dropdown ">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end p-0">
+                    <div class="py-2">   
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    </div>
+                    <hr class="m-0">
+                    <div class="py-2">
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </div>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <!--  -->
+    <div class="container">
+        <!-- nav tabs -->
+        <nav class="nav justify-content-center">
+            <a class="nav-link" id="three-img-tab" data-bs-toggle="tab"  data-bs-target="#three-img-tab-pane" href="" aria-selected="false"><i class="bi bi-grid-3x3"></i></a>
+            <a class="nav-link active" id="one-img-tab" data-bs-toggle="tab"  data-bs-target="#one-img-tab-pane" href="" aria-selected="true"><i class="bi bi-square-fill"></i></a>
+        </nav>
+
+        <!-- tabs content -->
+        <div class="tab-content"> 
+            <div class="tab-pane fade show active p-2" id="one-img-tab-pane" role="tabpanel" aria-labelledby="one-img-tab" tabindex="0">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="card col-8 mb-4">
+                        <div class="card-body p-0">
+                            <div class="card-title d-flex p-2 m-0">
+                                <h4 class="me-auto my-0">My crazy dog Muttley</h4>
+                                <p class="m-0">08/26</p>
+                            </div>
+                            <img src="./imgs/00.jpg" class="card-img-top rounded-0" alt="...">
+                            <div class="card-content p-2">
+                                <p class="card-text mb-0"><strong>204 likes</strong></p>
+                                <p class="card-text mb-4">This is an example of a very good photo that you can post on instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-8 mb-4">
+                        <div class="card-body p-0">
+                            <div class="card-title d-flex p-2 m-0">
+                                <h4 class="me-auto my-0">The greatness of Croatia</h4>
+                                <p class="m-0">04/09</p>
+                            </div>
+                            <img src="./imgs/01.jpg" class="card-img-top rounded-0" alt="...">
+                            <div class="card-content p-2">
+                                <p class="card-text mb-0"><strong>26985 likes</strong></p>
+                                <p class="card-text mb-4">This is an example of a very good photo that you can post on instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-8 mb-4">
+                        <div class="card-body p-0">
+                            <div class="card-title d-flex p-2 m-0">
+                                <h4 class="me-auto my-0">Amazing GOAL by Cristiano!</h4>
+                                <p class="m-0">06/10</p>
+                            </div>
+                            <img src="./imgs/02.jpg" class="card-img-top rounded-0" alt="...">
+                            <div class="card-content p-2">
+                                <p class="card-text mb-0"><strong>204 likes</strong></p>
+                                <p class="card-text mb-4">This is an example of a very good photo that you can post on instagram.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade p-2" id="three-img-tab-pane" role="tabpanel" aria-labelledby="three-img-tab" tabindex="0">
+                <div class="row g-2">
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/00.jpg"/>
+                        <!-- <div class="square img-thumbnail" style="background-image: url(./imgs/00.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/01.jpg"/>
+                        <!-- <div class="square" style="background-image: url(./imgs/01.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/02.jpg"/>
+                      <!-- <div class="square" style="background-image: url(./imgs/02.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/03.jpg"/>
+                      <!-- <div class="square" style="background-image: url(./imgs/02.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/04.jpg"/>
+                      <!-- <div class="square" style="background-image: url(./imgs/02.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/05.jpg"/>
+                      <!-- <div class="square" style="background-image: url(./imgs/02.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/06.jpg"/>
+                      <!-- <div class="square" style="background-image: url(./imgs/02.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/07.jpg"/>
+                      <!-- <div class="square" style="background-image: url(./imgs/02.jpg);"></div> -->
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="./imgs/squared/08.jpg"/>
+                      <!-- <div class="square" style="background-image: url(./imgs/02.jpg);"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
