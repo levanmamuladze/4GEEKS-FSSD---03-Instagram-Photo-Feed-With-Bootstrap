@@ -4,4 +4,5 @@ a.nav-link.active {color: #0d6efd;}
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    width:min-content;
 }
